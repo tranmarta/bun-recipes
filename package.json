@@ -2,13 +2,18 @@
   "name": "bun-recipes",
   "module": "index.ts",
   "type": "module",
-    "scripts": {
+  "scripts": {
     "dev": "bun --watch index.ts"
   },
   "devDependencies": {
+    "@types/react-dom": "^18.2.15",
     "bun-types": "^1.0.11"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
