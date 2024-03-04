@@ -5,7 +5,7 @@ const server = Bun.serve({
 
       if (url.pathname === "/app") {
         const buns = ( await Bun.file("./data.json").json()) as RecipeList;
-        const stream: ReactDOMServerReadableStream = await renderToReadableStream(<BunsList buns={buns} />);
+        const stream = await renderToReadableStream(<BunsList buns={buns} />);
         return new Response(stream, {
           headers: { "Content-Type": "text/html" },
         });

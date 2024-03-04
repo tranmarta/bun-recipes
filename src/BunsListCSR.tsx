@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { RecipeList } from "./types.ts";
+import { BunsList } from "./BunsList.tsx";
 
-export const BunsList = () => {
+export const BunsListCSR = () => {
     const [recipes, setRecipes] = useState<RecipeList>([]);
 
     useEffect(() => {
@@ -11,7 +12,7 @@ export const BunsList = () => {
             setRecipes(data);
         };
         fetchData();
-    },[]);
+    }, []);
 
-    return <BunsList buns={ recipes } />;
+    return <BunsList buns={recipes} />;
 };
